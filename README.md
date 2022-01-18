@@ -39,6 +39,7 @@
   * determineWinner - Note you need to setup the players, hands and assign. The input is a list of players 
 
 ## Submit
+* Before you commit you final solution, double check it can build and all the test you completed can run.
 * Go to the Week four folder and open the assessment
 * In text paste the https .git for the forked project
 * Zip the project and submit
