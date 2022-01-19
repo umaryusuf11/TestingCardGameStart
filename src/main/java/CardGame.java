@@ -1,13 +1,35 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class CardGame {
 
     protected Integer noOfCards = 2;
     protected Deck deck;
     public ArrayList<Player> players;
-    public Input userInput;
-    public ConsoleOutput userOutput;
+    private Scanner userInput = new Scanner(System.in);
 
+    public void output(String display){
+        System.out.println(display);
+    }
+
+    public String getString(){
+        return userInput.nextLine();
+    }
+
+    public int getInteger(){
+        int result;
+        result = -1;
+        do {
+            try {
+                result = Integer.parseInt(getString());
+            } catch (NumberFormatException exception) {
+                // Display.Output expected NumberFormatException.
+                System.out.println("Please enter a integer");
+            }
+        } while (result < 0);
+
+        return result;
+    }
 
     public void setNoOfCards(Integer noOfCards) {
         this.noOfCards = noOfCards;
@@ -19,25 +41,17 @@ public class CardGame {
 
     public CardGame(){
         this.deck = new Deck();
-        this.userInput = new ConsoleInput();
-        this.userOutput = new ConsoleOutput();
         this.players = new ArrayList<Player>();
     }
 
     public CardGame(String override){
         this.deck = new Deck(override);
-        this.userInput = new ConsoleInput();
-        this.userOutput = new ConsoleOutput();
         this.players = new ArrayList<Player>();
     }
 
-    public void setUserInput(Input userInput){
-        this.userInput = userInput;
-    }
-
     private void createHumanPlayer(){
-        userOutput.output("What is your name");
-        String name = userInput.getString();
+        output("What is your name");
+        String name = getString();
         players.add(new Player(PlayerType.USER,name,0));
     }
 
@@ -53,8 +67,8 @@ public class CardGame {
     public void initiatePlayers(){
         players.clear();
         createHumanPlayer();
-        userOutput.output("How many players, minimum of two?");
-        int noOfPlayers = userInput.getInteger();
+        output("How many players, minimum of two?");
+        int noOfPlayers = getInteger();
         createComputerPlayers(noOfPlayers);
     }
 
@@ -154,7 +168,7 @@ public class CardGame {
             } else {
                 theWinner = "";
             }
-            userOutput.output(theWinner + player.getName() + " - " + player.getHand().toString());
+            output(theWinner + player.getName() + " - " + player.getHand().toString());
         }
     }
 

@@ -13,7 +13,7 @@ public class BlackJack extends CardGame {
     }
 
     protected void help(){
-        userOutput.output(generateHelp());
+        output(generateHelp());
     }
 
     protected BlackJackActions getPlayerAction(Player player){
@@ -21,11 +21,11 @@ public class BlackJack extends CardGame {
         BlackJackActions userAction;
         help();
         if (player.hasHand()) {
-            userOutput.output(player.getHand().toString());
+            output(player.getHand().toString());
         }
-        userChoice = userInput.getString();
+        userChoice = getString();
         userAction = BlackJackActions.getAction(userChoice.substring(0,1).toUpperCase());
-        userOutput.output("You chose " + userAction.display());
+        output("You chose " + userAction.display());
         return userAction;
     }
 
