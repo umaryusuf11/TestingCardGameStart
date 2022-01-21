@@ -2,7 +2,7 @@
 ## Setup
 * See if not done from the last lab [https://stgit.dcs.gla.ac.uk/DerekSomerville/javagetstarted/-/wikis/home/setup](https://stgit.dcs.gla.ac.uk/DerekSomerville/javagetstarted/-/wikis/home/setup)
 * Fork [TestingCardGameStart](https://stgit.dcs.gla.ac.uk/DerekSomerville/testingcardgamestart) see [https://stgit.dcs.gla.ac.uk/DerekSomerville/javagetstarted/-/wikis/home/Git/Project_Setup](https://stgit.dcs.gla.ac.uk/DerekSomerville/javagetstarted/-/wikis/home/Git/Project_Setup)
-* Make sure you have invited Derek Somerville and your tutor as Developer Members
+* Make sure you have Project INformation/Members invited Derek Somerville, your tutor and Demonstrator as Developer Members
 
 ## Overview
 * We will create unit tests for all functions returning a value
@@ -13,7 +13,7 @@
 
 ## Player Tests
 * Please create unit tests for the Player Class
-* Open Player Class, click on it, "Shift + Cntrl + t" to create default unit tests
+* Open Player Class, click on it, Intellij "Shift + Cntrl + t" to create default unit tests Eclipse New/Junit Test Case
 * Select the following methods:
   * hasWon
   * getPlayerType
@@ -23,14 +23,14 @@
 
 ## Card Game
 * Please create unit tests for the CardGame Class
-* Open CardGame Class, click on it, "Shift + Cntrl + t" to create default unit tests
+* Open CardGame Class, click on it, Intellij "Shift + Cntrl + t" to create default unit tests Eclipse New/Junit Test Case
 * Select the following methods:
   * getDeck
   * dealHand - note there is an override constructor to create a card game with a deck of cards
 
 ## BlackJack
 * Please create unit tests for the BlackJack Class
-* Open BlackJack Class, click on it, "Shift + Cntrl + t" to create default unit tests
+* Open BlackJack Class, click on it, Intellij "Shift + Cntrl + t" to create default unit tests Eclipse New/Junit Test Case
 * Select the following methods:
   * getScore
     * getScoreAceHigh - Score where an Ace is high e.g. not bust
