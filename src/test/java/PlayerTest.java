@@ -21,6 +21,7 @@ public class PlayerTest {
 
     @Test
     void getPlayerTypeUser() {
+        Player player = new Player(PlayerType.USER, "p1", 3);
         assertEquals(PlayerType.USER, player.getPlayerType());
     }
 
@@ -51,6 +52,7 @@ public class PlayerTest {
 
     @Test
     void getHand() {
+        Player player = new Player(PlayerType.USER, "p1", 3);
         assertNull(player.getHand());
     }
 
