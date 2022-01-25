@@ -3,8 +3,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class PlayerTest {
 
-    Player player = new Player(PlayerType.USER, "p1", 3);
-
     @Test
     void hasWon() {
         Player player = new Player(PlayerType.USER, "p1", 3);
