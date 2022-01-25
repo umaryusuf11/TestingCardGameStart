@@ -3,8 +3,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CardGameTest {
 
-    CardGame cardGame = new CardGame();
-
     @Test
     void getDeck() {
         CardGame cardGame = new CardGame();
